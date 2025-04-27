@@ -1,57 +1,97 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Agathe Meslem</title><link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jost:ital,wght@0,100..900;1,100..900&family=Londrina+Sketch&family=Pacifico&family=Poiret+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Agathe Meslem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Explora&family=Rowdies:wght@300;400;700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Sora", sans-serif;
+      background-color: #f4f0df;
+      color: #f5d1ed;
+    }
+
+    .header {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      margin: 0;
+      z-index: 10;
+      height: auto;
+    }
+
+    .header h1 {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .projets {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      margin: 10px auto;
+      padding: 1px;
+      max-width: 80%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .fiche {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #1A1A1D;
+      padding: 20px;
+      z-index: 1000;
+      width: 50%;
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: 10px;
+    }
+
+    .fiche img {
+      width: 100%;
+      height: auto;
+    }
+
+    .fiche button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgb(239, 196, 223), rgb(118, 31, 133));
+      z-index: 999;
+    }
+  </style>
 </head>
 <body>
 
-    <header class="header">
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/mess.png" alt="Logo Portfolio" style="height: 35px;">
-            </a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="portfolio.html">PROJECTS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="header">
+    <h1 class="logo">Agathe Meslem - portfolio</h1>
+  </header>
+  <div class="projets"></div>
 
-    <section class="landing-section">
-        <h1 class="main-title">PORTFOLIO</h1>
-        <img src="images/chaussure_page-0001.jpg" alt="Image côté" class="portfolio-image">
-    </section>
-
-    <section class="image-section">
-        <img src="images/b.jpg" alt="étrange">
-        <div class="overlay-text">
-            <h3>AGATHE MESLEM</h3>
-                <em>Graphic and Digital Design Student</em>
-                <p>École supérieure d'art et de design d'Amiens</p>
-                <p>Driven by a deep fascination with visual storytelling, I am a dedicated graphic and digital design student passionate about how design can shape experiences and create meaningful connections. With a strong foundation in design software, typography, and layout techniques, I strive to craft visuals that not only capture attention but also evoke thought and emotion.</p>
-                
-                <p>My design approach is influenced by diverse interests, including chess, poetry, surrealism, and marine life—elements that often bring a blend of precision, whimsy, and depth to my work. Additionally, my interest in drag culture has taught me to embrace boldness and fluidity, allowing for a playful yet intentional style in the narratives I create.</p>
-                
-                <p>I am eager to continue learning and contributing my unique perspective to the design field, pushing the boundaries of creativity in typography, editorial layout, and immersive digital projects.</p>
-        </div>
-    </section>
-    
-
-    <div class="button-section">
-        <a href="portfolio.html" class="portfolio-button">View my work</a>
-    </div>
-    
-    <footer class="footer">
-        <p>© Esad Amiens 2024 creation. Agathe Meslem.</p>
-    </footer>
-    
-
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.7.0"></script>
+  <script type="module" src="main.js"></script>
 </body>
 </html>
